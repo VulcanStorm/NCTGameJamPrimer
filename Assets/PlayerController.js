@@ -1,6 +1,11 @@
 #pragma strict
 @script RequireComponent(Rigidbody)
 
+/*
+
+!HI EVERYONE!
+
+*/
 
 public var thisTransform : Transform = null;
 public var thisRigidbody : Rigidbody = null;
