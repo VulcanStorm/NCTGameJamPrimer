@@ -44,7 +44,7 @@ function OnGUI () {
 		}
 		
 		// draw the back to menu button
-		if(GUI.Button(new Rect(5,70,100,25), "Back to Menu")){
+		if(GUI.Button(new Rect(5,70,100,25), "Menu")){
 			// load the menu level
 			Application.LoadLevel("Menu");
 		}

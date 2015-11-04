@@ -50,7 +50,7 @@ function FixedUpdate () {
 	
 	moveInputPos.x = strafeAxis;
 	moveInputPos.z = walkAxis;
-	moveInputPos = thisTransform.InverseTransformDirection(moveInputPos);
+	moveInputPos = thisTransform.TransformDirection(moveInputPos);
 	if(isRunning == true){
 		moveInputPos = moveInputPos.normalized * runSpeed * Time.deltaTime;
 	}
