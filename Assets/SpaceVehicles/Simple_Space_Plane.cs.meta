@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2f313fc83a294664e81f4717a4d8f138
+timeCreated: 1449481693
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - laserBulletPrefab: {fileID: 108548, guid: 0b33347390ada4b46bb18b28a690e07a, type: 2}
+  - firePoint: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
