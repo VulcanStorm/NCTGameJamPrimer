@@ -45,6 +45,7 @@ public class TankTurret : MonoBehaviour {
 		if(doAim == true){
 			
 			// aim the turret
+			targetTransform = tankScript.currentTargetTransform;
 			
 			// localise the target position
 			localTurretTargetPos = turret.InverseTransformPoint(targetTransform.position);
