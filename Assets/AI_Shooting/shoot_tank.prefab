@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &106762
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 451268}
+  m_Layer: 2
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &110666
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +26,7 @@ GameObject:
   - 33: {fileID: 3393234}
   - 23: {fileID: 2356300}
   - 65: {fileID: 6574548}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Track_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +43,7 @@ GameObject:
   - 4: {fileID: 420738}
   - 33: {fileID: 3399738}
   - 23: {fileID: 2386336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +61,7 @@ GameObject:
   - 33: {fileID: 3369032}
   - 23: {fileID: 2345908}
   - 65: {fileID: 6562326}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Track_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +78,7 @@ GameObject:
   - 4: {fileID: 447844}
   - 33: {fileID: 3387324}
   - 23: {fileID: 2385970}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +95,7 @@ GameObject:
   - 4: {fileID: 491450}
   - 33: {fileID: 3357736}
   - 23: {fileID: 2344268}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,9 +111,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 470122}
   - 135: {fileID: 13542620}
-  m_Layer: 0
+  - 114: {fileID: 11433882}
+  m_Layer: 8
   m_Name: RangeTrigger
-  m_TagString: Untagged
+  m_TagString: TankTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +129,7 @@ GameObject:
   - 4: {fileID: 411506}
   - 33: {fileID: 3356652}
   - 23: {fileID: 2325414}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +146,7 @@ GameObject:
   - 4: {fileID: 452268}
   - 33: {fileID: 3360808}
   - 23: {fileID: 2397910}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +163,7 @@ GameObject:
   - 4: {fileID: 457134}
   - 33: {fileID: 3333834}
   - 23: {fileID: 2377344}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +181,8 @@ GameObject:
   - 33: {fileID: 3321252}
   - 23: {fileID: 2324754}
   - 65: {fileID: 6580068}
-  m_Layer: 0
+  - 114: {fileID: 11431648}
+  m_Layer: 2
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,9 +199,10 @@ GameObject:
   - 4: {fileID: 409534}
   - 54: {fileID: 5489592}
   - 114: {fileID: 11445702}
-  m_Layer: 0
+  - 114: {fileID: 11433088}
+  m_Layer: 2
   m_Name: shoot_tank
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,8 +217,8 @@ GameObject:
   - 4: {fileID: 464920}
   - 33: {fileID: 3381038}
   - 23: {fileID: 2315286}
-  - 65: {fileID: 6539378}
-  m_Layer: 0
+  - 64: {fileID: 6487836}
+  m_Layer: 2
   m_Name: Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,8 +244,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189276}
-  m_LocalRotation: {x: .00168355263, y: .000828566379, z: .00144289911, w: .999997199}
-  m_LocalPosition: {x: 61.1049271, y: 2, z: -1.44780004}
+  m_LocalRotation: {x: .00144436525, y: .999998987, z: -2.35316988e-10, w: -1.62920529e-07}
+  m_LocalPosition: {x: 0, y: 2, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470122}
@@ -290,6 +308,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 409534}
   m_RootOrder: 6
+--- !u!4 &451268
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 452268}
+  m_RootOrder: 0
 --- !u!4 &452268
 Transform:
   m_ObjectHideFlags: 1
@@ -299,7 +329,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.12499994, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 451268}
   m_Father: {fileID: 401296}
   m_RootOrder: 0
 --- !u!4 &457134
@@ -687,8 +718,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6539378
-BoxCollider:
+--- !u!64 &6487836
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -697,8 +728,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.39949989, y: 1.1264081, z: 2.79999995}
-  m_Center: {x: 0, y: .037499994, z: 0}
+  m_Convex: 1
+  m_Mesh: {fileID: 4300018, guid: b662c777974076140832e1e325c7b821, type: 3}
 --- !u!65 &6562326
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -735,6 +766,73 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.25000203, y: .649999976, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11431648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e692d05e54bea046aaf68cd2af4d263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankScript: {fileID: 11433088}
+  targetTransform: {fileID: 0}
+  turret: {fileID: 401296}
+  barrel: {fileID: 452268}
+  onTarget: 0
+  doAim: 0
+  localTurretTargetPos: {x: 0, y: 0, z: 0}
+  turretAngleToTarget: 0
+  minTurretAcc: -.5
+  maxTurretAcc: .5
+  turretRotSpeed: 60
+  localBarrelTargetPos: {x: 0, y: 0, z: 0}
+  barrelAngleToTarget: 0
+  minBarrelAcc: -.5
+  maxBarrelAcc: .5
+  barrelRotSpeed: 30
+  aimCount: 0
+--- !u!114 &11433088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a86a1fa42fce1409fa8d1121f0c6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: 
+  firePoint: {fileID: 451268}
+  projectile: {fileID: 191092, guid: d0c1dd201725f1b48a01504572840917, type: 2}
+  tankTurret: {fileID: 11431648}
+  rayHitLayers:
+    serializedVersion: 2
+    m_Bits: 4294966523
+  myTargetID: -1
+  hasTarget: 0
+  currentTargetTransform: {fileID: 0}
+  currentTargetID: -1
+  thisTransform: {fileID: 0}
+  isAimedAtTarget: 0
+  timer: 0
+  fireTime: .330000013
+  health: 100
+--- !u!114 &11433882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7805ec29347e62346b1cb6f0c21abd9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankScript: {fileID: 0}
 --- !u!114 &11445702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -747,7 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTargetPos: {x: 0, y: 0, z: 0}
-  targetPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: -10, y: 0, z: 0}
   moveSpeed: 3
   turnSpeed: 60
   minDistToStop: 2
@@ -763,7 +861,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 30
+  m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:

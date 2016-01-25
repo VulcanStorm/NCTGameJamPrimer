@@ -2,14 +2,24 @@
 using System.Collections;
 
 public class TankRangeTrigger : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
 	
+	public TankShoot tankScript;
+	
+	void Start (){
+		tankScript = GetComponentInParent<TankShoot>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void OnTriggerEnter (Collider other){
+		if(other.tag == "TankTrigger"){
+			TankRangeTrigger otherScript = other.GetComponent<TankRangeTrigger>();
+			tankScript.AddNewTarget(otherScript.tankScript.myTargetID);
+		}
+	}
 	
+	void OnTriggerExit (Collider other){
+		if(other.tag == "TankTrigger"){
+			TankRangeTrigger otherScript = other.GetComponent<TankRangeTrigger>();
+			tankScript.RemoveTarget(otherScript.tankScript.myTargetID);
+		}
 	}
 }
