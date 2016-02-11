@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<PlayerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <playerName>Fred</playerName>
+  <playerHealth>50</playerHealth>
+  <xPos>-5</xPos>
+  <yPos>20</yPos>
+  <zPos>7</zPos>
+</PlayerData>
